@@ -12,22 +12,38 @@
         html {
             height: 100%;
         }
-        @keyframes myfirst {
-            from {opacity:0;}
-            to {opacity:100;}
+        @keyframes one {
+            0% {opacity:0;}
+            25% {opacity:100;}
+            50% {opacity:0;}
+            100% {opacity:0;}
         }
-        h1,p{
-            animation: myfirst 3s infinite;
+        @keyframes two {
+            0% {opacity:0;}
+            25% {opacity:0;}
+            75% {opacity:1000;}
+            100% {opacity:0;}
         }
-
+       h2{
+           font-size:100px;
+           color: navajowhite;
+           position: absolute;
+           text-align:center ;
+           animation: myfirst 13s infinite;
+        }
+        #First{
+            animation:one 13s infinite;
+        }
+        #Second{
+            animation:two 13s infinite;
+        }
     </style>
 </head>
 <body>
-<audio  controls="controls" autoplay="autoplay">
+<audio controls="controls" autoplay="autoplay" loop="loop">
 <source src="bgm/bgm.mpeg" type="audio/mpeg"/>
 </audio>
-<h1>“嘤嘤嘤”</h1>
-<p>确认过眼神，</p>
-<p>遇上对的人，</p>
+<h2 id="First">确认过眼神，</h2>
+<h2 id="Second">遇上对的人，</h2>
 </body>
 </html>
